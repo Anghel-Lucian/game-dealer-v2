@@ -1,4 +1,5 @@
 import View from './View';
+import metacriticIcon from '../../img/metacriticIcon.png';
 
 class GameView extends View {
   _parentElement = document.querySelector('.game__container');
@@ -31,7 +32,7 @@ class GameView extends View {
             }/" target="_blank">
               <img
                 class="steam__icon rating__icon"
-                src="steam-icon.1c571dd0.png"
+                src="${metacriticIcon}"
                 alt="Steam icon"
               />${data.steamRating || '--'}
             </a>
