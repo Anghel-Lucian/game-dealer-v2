@@ -22,7 +22,7 @@ class GameView extends View {
             }" target="_blank">
               <img
                 class="metacritic__icon rating__icon"
-                src="metacritic-icon.cae689fa.png"
+                src="../../img/metacriticIcon.png"
                 alt="Metacritic icon"
               />${data.metacriticRating || '--'}
             </a>
