@@ -1,0 +1,195 @@
+/* BTN DEFAULT STYLING */
+.btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  padding: 7px 15px;
+  background: var(--color-secondary-2);
+  color: var(--color-dark);
+  transition: all 0.2s;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* INPUT WITH TYPE SEARCH DEFAULT STYLING */
+input[type='search'] {
+  font-size: 1.2rem;
+  padding: 7px 15px;
+  border: none;
+  font-weight: 500;
+}
+
+/* LIST OF GAME PREVIEWS DEFAULT STYLING */
+.deals--list {
+  padding-left: 10px;
+  max-height: 430px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* search results styling */
+.search__results {
+  min-height: fit-content;
+  max-height: none;
+}
+
+.game__preview:last-child {
+  border: none;
+}
+
+.deals--list::-webkit-scrollbar {
+  width: 10px;
+}
+.deals--list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.deals--list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color-medium);
+}
+
+/* SIDEBAR FOOTER STYLING */
+.footer__sidebar {
+  color: var(--color-light);
+  max-width: 100%;
+  padding: 10px 10px;
+  margin-top: 5px;
+  text-align: center;
+  background-color: var(--color-secondary-1);
+}
+
+/* RATING ELEMENTS STYLING */
+.rating__icon {
+  max-width: 25px;
+}
+
+.rating {
+  margin: 5px 10px;
+  font-size: 2.3rem;
+  font-family: var(--font-secondary);
+  padding: 0px 2px;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.rating:hover {
+  color: inherit;
+  cursor: pointer;
+  background: var(--color-secondary-1-light);
+}
+
+.rating > img {
+  margin: 0px 3px;
+  position: relative;
+  top: -2px;
+  left: 0px;
+}
+
+/* DEALS STYLING */
+.game__deals--title {
+  margin: 15px 0px;
+}
+
+.game__deals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.game__deal {
+  background: var(--color-light);
+  border-radius: 5px;
+  padding: 10px 15px;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.game__deal:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.link__to__deal {
+  color: var(--color-dark);
+}
+.link__to__deal:hover {
+  color: var(--color-dark);
+}
+
+.game__deal .game__deal--icon {
+  z-index: -1;
+  width: 90px;
+  position: absolute;
+  opacity: 0.6;
+  top: 10px;
+  right: -13px;
+}
+
+.game__deal--price {
+  margin-top: 3px;
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+}
+.game__deal--rating {
+  font-family: var(--font-secondary);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.game__deal--store {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* ERROR MESSAGE AND ELEMENT */
+.error {
+  color: var(--color-secondary-3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 275px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.error .error__icon {
+  font-size: 2.5rem;
+  width: 25%;
+}
+.error .error__message {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* LOADING SPINNER */
+.loading__spinner {
+  color: var(--color-secondary-1-light);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner__icon {
+  width: fit-content;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,111 @@
+@import url('./config.css');
+@import url('./components.css');
+@import url('./filter.css');
+@import url('./preview.css');
+@import url('./searchResults.css');
+@import url('./game.css');
+
+body {
+  background: var(--color-dark);
+  padding: 50px 100px;
+  color: var(--color-light);
+}
+
+/* CONTAINER */
+.container {
+  background: var(--color-main);
+  border-radius: 10px;
+  width: 1200px;
+  min-height: fit-content;
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    'head head head head head head head'
+    'sidebar game game game game game game';
+}
+
+/* defining grid identifiers */
+.top__section {
+  grid-area: head;
+}
+.sidebar__left {
+  grid-area: sidebar;
+}
+.game__container {
+  grid-area: game;
+}
+
+/* TOP SECTION */
+.top__section {
+  background: var(--color-secondary-1);
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  padding: 10px 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: var(--color-dark) 0px 0px 15px;
+  position: relative;
+}
+
+/* TOP SECTION SEARCH */
+.top__section .search {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.search__input {
+  border-radius: 40px;
+  margin-right: -35px;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__submit {
+  border-radius: 40px;
+}
+
+/* TOP SECTION SAVED DEALS */
+.saved__deals {
+  height: 125%;
+  position: relative;
+}
+
+.saved__deals--btn {
+  background: none;
+  border-radius: 0px;
+  color: var(--color-light);
+  height: 100%;
+  text-transform: uppercase;
+}
+.saved__deals--btn:hover {
+  transform: none;
+}
+
+.saved__deals--modal {
+  background: var(--color-light);
+  position: absolute;
+  z-index: 10;
+  width: 300px;
+  height: fit-content;
+  padding: 5px 0px;
+  left: -132px;
+  box-shadow: var(--color-dark) 1px 1px 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* configuring hover and dropdown menu */
+.saved__deals:hover .saved__deals--modal {
+  visibility: visible;
+  opacity: 1;
+}
+.saved__deals:hover .saved__deals--btn {
+  background: var(--color-secondary-1-light);
+}

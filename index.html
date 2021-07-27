@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/0e238db8f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="/src/js/controller.js"></script>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <title>Game dealer v2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top__section" id="head">
+        <form class="search">
+          <div class="search__bar">
+            <input
+              type="search"
+              placeholder="Search for a game..."
+              class="search__input"
+            />
+            <button type="submit" class="search__submit btn">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+          <button class="search__filters--btn btn">
+            <i class="fas fa-filter"></i>
+          </button>
+          <div class="search__filters raised">
+            <div class="label--input__container">
+              <label for="sort" class="sort--label">Sort by</label>
+              <select name="sort" class="sort--selection">
+                <option value="">--Select option--</option>
+                <option value="price">Price</option>
+                <option value="name">Name</option>
+              </select>
+            </div>
+            <div class="label--input__container">
+              <label for="maxPrice" class="price__max--label"
+                >Maximum price</label
+              >
+              <input
+                type="number"
+                min="1"
+                name="maxPrice"
+                class="price__max--input"
+              />
+            </div>
+            <div class="label--input__container">
+              <label for="resultsLimit" class="results__limit--label"
+                >Results limit</label
+              >
+              <input
+                type="number"
+                min="1"
+                max="60"
+                name="resultsLimit"
+                class="results__limit--input"
+              />
+            </div>
+            <div class="label--input__container">
+              <button class="apply--btn">Apply</button>
+              <button class="reset--btn">Reset</button>
+            </div>
+          </div>
+        </form>
+        <div class="saved__deals">
+          <button class="saved__deals--btn btn">
+            <i class="far fa-bookmark"></i> Your deals
+          </button>
+          <div class="saved__deals--modal">
+            <ul class="bookmarks__list deals--list" id="saved__deals"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__left" id="sidebar">
+        <ul class="search__results deals--list"></ul>
+        <p class="footer__sidebar">
+          &copy; Copyright Anghel Lucian. Made with the help of
+          <a href="https://apidocs.cheapshark.com/" target="_blank"
+            >CheapShark API</a
+          >
+          &
+          <a href="https://api.rawg.io/docs/" target="_blank">RAWG API</a>
+        </p>
+      </div>
+      <div class="game__container" id="game"></div>
+    </div>
+  </body>
+</html>

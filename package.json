@@ -1,0 +1,16 @@
+{
+  "name": "game-dealer-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir ./out"
+  },
+  "author": "Anghel Paul-Lucian",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "src": "^1.1.2"
+  }
+}

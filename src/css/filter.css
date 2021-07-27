@@ -1,0 +1,87 @@
+/* FILTERS BUTTON */
+.search__filters--btn {
+  background: none;
+  border: none;
+  color: var(--color-light);
+  margin-left: 10px;
+  font-size: 2rem;
+  padding: 0;
+}
+.search__filters--btn:hover {
+  color: var(--color-secondary-2);
+  transform: none;
+}
+
+/* ACTUAL CONTAINER */
+.search__filters {
+  position: absolute;
+  z-index: 1;
+  background: var(--color-secondary-2);
+  color: var(--color-dark);
+  box-shadow: var(--color-dark) 0px 0px 10px;
+  padding: 20px 15px;
+  left: 400px;
+  height: fit-content;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+.dropped {
+  top: 0px;
+}
+.raised {
+  top: -300px;
+}
+
+.label--input__container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label--input__container label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+/* INDIVIDUAL TYPES OF INPUT STYLING */
+.search__filters select {
+  font-size: 0.9rem;
+}
+.search__filters select:focus {
+  outline: 2px solid var(--color-dark);
+}
+
+.search__filters input[type='number'] {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  max-width: 50px;
+  height: 30px;
+}
+.search__filters input[type='number']:focus {
+  outline: 2px solid var(--color-dark);
+}
+
+.search__filters button {
+  width: fit-content;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--color-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  background: var(--color-secondary-1);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.search__filters button:hover {
+  background: var(--color-secondary-1-light);
+  cursor: pointer;
+}
