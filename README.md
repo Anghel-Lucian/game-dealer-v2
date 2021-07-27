@@ -7,3 +7,5 @@ The app is based on the Model-View-Controller architectural pattern, because the
 As seen in the structure of the code, there is a view JavaScript file for each major component of the application.
 
 The user has the ability of bookmarking certain games so that they are available on future accesses of the app. Because of the fact that the app does not function with a database, or authentication, the bookmarks are SAVED INSIDE THE BROWSER'S LOCAL STORAGE, as such, make sure to clear it after using the app if you add bookmarks.
+
+This app is continuously deployed on Netlify: game-dealer.netlify.app
