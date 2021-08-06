@@ -123,7 +123,9 @@
   align-items: center;
   position: relative;
   height: 270px;
+  margin: 5px 0px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .game__images--item {
